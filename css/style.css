@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+span {
+  color: rgb(251, 75, 5);
+}
+
+/* header section by harshal honde */
+.header {
+  border: 1px solid rgb(251, 75, 5);
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+  bottom: 0;
+}
+
+.header h1 {
+  color: rgb(187, 106, 76);
+  text-transform: uppercase;
+}
+
+/* my main container for page by harshal honde*/
+.container {
+  width: 100%;
+  height: 110vh;
+  overflow: hidden;
+  background-color: black;
+  position: fixed;
+}
+
+/* my navbar by harshal honde*/
+.navbar {
+  color: whitesmoke;
+  border: 2px solid rgb(251, 75, 5);
+  display: flex;
+  justify-content: space-around;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+}
+
+.navbar h1 {
+  /* border: 2px solid white; */
+  padding-top: 15px;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.navbar ul {
+  display: flex;
+  /* border: 2px solid white; */
+  padding-top: 20px;
+  font-size: 25px;
+}
+
+.navbar ul li,
+a {
+  list-style: none;
+  text-decoration: none;
+  margin-left: 90px;
+  color: whitesmoke;
+  margin-bottom: 10px;
+}
+
+.navbar a:hover {
+  text-decoration: underline rgb(251, 75, 5);
+  cursor: pointer;
+}
+
+/* my animation by harshal honde */
+.animation {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  margin-top: 350px;
+  /* background: #fff; */
+}
+
+.blob h1 {
+  font-size: 30px;
+  position: relative;
+  left: 30%;
+  top: 50%;
+  z-index: 1000;
+  color: white;
+  font-weight: 900;
+  text-decoration: dotted;
+}
+
+.blob:nth-child(2) {
+  filter: blur(200px);
+  margin-top: 50%;
+}
+
+/* for animation of bubble by harshal honde */
+.bubble {
+  position: relative;
+  display: flex;
+}
+
+.bubble span {
+  position: relative;
+  width: 5px;
+  height: 5px;
+  background-color: #4fc3dc;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgb(251, 75, 5), 0 0 50px rgb(251, 75, 5),
+    0 0 100px rgb(251, 75, 5);
+  animation: hello 20s linear infinite;
+  animation-duration: calc(125s / var(--i));
+}
+
+.bubble span:nth-child(even) {
+  background: rgb(251, 75, 5);
+  box-shadow: 0 0 0 2px #4fc3dc44, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+}
+
+.bubble span:nth-child(even + 1) {
+  background: #9e08ef;
+  box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #9e08ef, 0 0 100px #9e08ef;
+}
+
+/* button hover */
+.navbar a {
+  /* border: 2px solid white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2px;
+}
+
+/* footer  */
+.footer {
+  position: fixed;
+  padding: 9px 10px 0px 10px;
+  bottom: 0;
+  width: 100%;
+  height: 110px;
+  color: whitesmoke;
+  background: black;
+  border: 2px solid rgb(251, 75, 5);
+  border-left: none;
+  /* border-bottom: none; */
+  border-right: none;
+}
+
+.footer p,
+h3 {
+  text-align: center;
+}
+
+.img-section {
+  /* border: 2px solid red; */
+  position: relative;
+  z-index: -1;
+  left: 70%;
+}
+
+@keyframes hello {
+  0% {
+    transform: translateY(130vh) scale(0);
+  }
+
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    height: 125px;
+    padding: 6px 8px 0px 8px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Media query for screen sizes between 768px and 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .footer {
+    height: 100px;
+    padding: 8px 10px 0px 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Media query for screen sizes above 1024px */
+@media screen and (min-width: 1024px) {
+  .footer {
+    height: 110px;
+    padding: 9px 10px 0px 10px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* styles for screens up to 768px */
+  .navbar ul li,
+  a {
+    margin-left: 30px;
+    font-size: 18px;
+  }
+
+  .navbar h1 {
+    font-size: 30px;
+  }
+
+  .blob {
+    margin-top: 200px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .blob h1 {
+    font-size: 20px;
+    left: 25%;
+  }
+
+  .bubble span {
+    width: 40px;
+    height: 2px;
+    background: #ff2d75;
+  }
+
+  .bubble span:nth-child(even) {
+    background: #ff2d75;
+    box-shadow: 0 0 0 2px #4fc3dc44, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+  }
+
+  .blob:nth-child(2) {
+    filter: blur(90px);
+    margin-top: 70%;
+  }
+
+  .blob {
+    margin-top: 50%;
+  }
+
+  .header h1 {
+    color: rgb(161, 125, 158);
+    text-transform: uppercase;
+    font-size: 25px;
+  }
+
+  .img-section img {
+    position: relative;
+    width: 197px;
+    height: 419px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* styles for screens up to 480px */
+  .navbar ul li,
+  a {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+
+  .navbar h1 {
+    font-size: 20px;
+  }
+
+  .blob {
+    margin-top: 100px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .blob h1 {
+    font-size: 16px;
+    left: 20%;
+  }
+
+  .bubble span {
+    width: 40px;
+    height: 2px;
+    background: #ff2d75;
+  }
+
+  .bubble span:nth-child(even) {
+    background: #ff2d75;
+    box-shadow: 0 0 0 2px #4fc3dc44, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+  }
+
+  .blob:nth-child(2) {
+    filter: blur(70px);
+    margin-top: 70%;
+  }
+
+  .blob {
+    margin-top: 50%;
+  }
+
+  .header h1 {
+    color: rgb(161, 125, 158);
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+}
